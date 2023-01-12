@@ -13,5 +13,9 @@ class FiltersComponent::ContainerComponent < ViewComponent::Base
     super
   end
 
+  def container_class
+    "govuk-filter__container" + (sidebar ? " govuk-grid-column-one-third" : "govuk-grid-column-full")
+  end
+
   renders_one :element, FiltersComponent::ContainerComponent::ElementComponent
 end

@@ -1,7 +1,5 @@
 class FiltersComponent::ContainerComponent::ElementComponent < ViewComponent::Base
-  def initialize(text:)
-    @text = text
-
+  def initialize()
     super
   end
 end

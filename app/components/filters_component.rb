@@ -1,12 +1,10 @@
 class FiltersComponent < ViewComponent::Base
-  attr_reader :form
-
-  def initialize(form, title:)
-    @form = form
+  def initialize(title:)
     @title = title
 
     super
   end
 
-  renders_one :container, FiltersComponent::ContainerComponent
+  renders_one :topbar, FiltersComponent::TopbarComponent
+  renders_one :sidebar, FiltersComponent::SidebarComponent
 end
